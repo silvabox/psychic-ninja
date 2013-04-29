@@ -8,7 +8,11 @@ describe Context do
     context[:item1].should eq :value1
     context[:item2].should eq :value2
   end
-  it 'allows a context item to be set' do
 
+  it 'allows a context item to be set on the fly' do
+    context = Context.new
+
+    context[:item1] = :value1
+    context[:item1].should eq :value1
   end
 end
